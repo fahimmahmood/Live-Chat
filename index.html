@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Live Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="container my-4">
+      <h1 class="my-4 text-center">Live Chat</h1>
+
+      
+
+      <div class="chat-window">
+        <ul class="chat-list list-group"></ul>
+      </div>
+
+      <form class="new-chat my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Your message: </div>
+          </div>
+          <input type="text" id="message" class="form-control" required>
+          <div class="input-group-append">
+            <input type="submit" class="btn" value="send" >
+          </div>
+        </div>
+      </form>
+
+      <form class="new-name my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Update name :</div>
+          </div>
+          <input type="text" id="name" class="form-cntrol" required>
+          <div class="input-group-append">
+            <input type="submit" class="btn" value="update">
+          </div>
+        </div>
+        <div class="update-msg text-center"></div>
+      </form>
+
+
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAYGQj_s2yih4YOTmGVaFPUJ0YTJLv4Ea8",
+      authDomain: "test1-c8ca1.firebaseapp.com",
+      databaseURL: "https://test1-c8ca1.firebaseio.com",
+      projectId: "test1-c8ca1",
+      storageBucket: "test1-c8ca1.appspot.com",
+      messagingSenderId: "696733912364",
+      appId: "1:696733912364:web:a6b45c8f9379690161b089"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db=firebase.firestore();
+  </script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/chat.js"></script>
+  <script src="scripts/app.js"></script>
+  </body>
+</html>
